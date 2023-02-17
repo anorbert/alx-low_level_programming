@@ -1,13 +1,24 @@
 #include <stdio.h>
-main(){
-      int a=1;
+#include <stdlib.h>
+#include <time.h>
 
-      if (a>0){
-              printf("is positive");
-      }elseif(a==0){
-	      printf("iz zero");
-      }else{
-	      printif("is negative");
-      }
-      return (0);
+int main(void)
+{
+int a;
+srand(time(0));
+a = rand() - RAND_MAX / 2;
+/* if number is greater than 0 */
+if (a > 0)
+{
+printf("%d is positive\n", a);
+}
+if (a < 0)
+{
+printf("%d is negative\n", a);
+}
+if (a == 0)
+{
+printf("%d is zero\n", a);
+}
+return (0);
 }
